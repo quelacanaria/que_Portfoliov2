@@ -9,14 +9,21 @@ const PORT = process.env.PORT;
 const user = process.env.USER;
 const userpassword = process.env.USERPASSWORD;
 
-app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
+app.use(cors({
+  origin: "https://que-portfoliov2-1.onrender.com", // IMPORTANT: no slash
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+}));    
+
+app.options("*", cors());
+
 app.use(bodyParser.json());
 
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: {
         user: user,
         pass: userpassword
