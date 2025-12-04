@@ -19,7 +19,7 @@ function Links({ currentSection}){
                         <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[1.1rem] md:text-[1.2rem]">https://www.facebook.com/queque.neth</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://github.com/quelacanaria"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/github.svg" alt="" /></a>
                         <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[1.1rem] md:text-[1.2rem]">https://github.com/quelacanaria</p>
-                        <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://www.linkedin.com/in/quekeneth/"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/linkedin.svg" alt="" /></a>
+                        <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://www.linkedin.com/in/quekeneth/"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/linkedIn.svg" alt="" /></a>
                         <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px]  text-[1.1rem] md:text-[1.2rem]">https://www.linkedin.com/in/quekeneth/</p>
                     </div>
                 </div>
