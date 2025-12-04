@@ -58,14 +58,14 @@ const userHtml = `
 `;
 
 try{
-  await transporter.emails.send({
+  await transporter.sendMail({
     from: login,
     to: user,
     subject: `${subject}`,
     html: adminHtml
   });
 
-  await transporter.emails.send({
+  await transporter.sendMail({
     from: login,
     to: email,
     subject: "Thanks for Reaching out",
