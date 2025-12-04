@@ -16,7 +16,7 @@ function Forms({currentSection}){
     const [inputs, setInputs] = useState({
         name: '',
         subject: '',
-        emailData: '',
+        email: '',
         phone: '',
         message: ''
     });
@@ -52,7 +52,7 @@ const submit = async(event) => {
         setInputs({
             name: '',
             subject: '',
-            emailData: '',
+            email: '',
             phone: '',
             message: ''
             });
@@ -74,7 +74,7 @@ const submit = async(event) => {
                         <label className="text-[1.2rem] self-center justify-self-start md:justify-self-end row-span-1 2xl:col-span-2 xl:col-span-2 lg:col-span-2 md:col-span-2 xs:col-span-6" htmlFor="">Subject:</label>
                         <input value={inputs.subject} name='subject' onChange={event => setInputs({...inputs, subject: event.target.value})} className="text-[1.2rem] h-[45px] p-[5px] border-2 col-span-8 md:col-span-3 row-span-1" placeholder="Job Offer" type="text" required/>
                         <label className="text-[1.2rem] self-center justify-self-start md:justify-self-end row-span-1 2xl:col-span-2 xl:col-span-2 lg:col-span-2 md:col-span-2 xs:col-span-6" htmlFor="">Email:</label>
-                        <input value={inputs.email} name='email' onChange={event => setInputs({...inputs, emailData: event.target.value})} className="text-[1.2rem] h-[45px] p-[5px] border-2 col-span-8 md:col-span-3 row-span-1" placeholder="johndoe@123.com" type="email" required/>
+                        <input value={inputs.email} name='email' onChange={event => setInputs({...inputs, email: event.target.value})} className="text-[1.2rem] h-[45px] p-[5px] border-2 col-span-8 md:col-span-3 row-span-1" placeholder="johndoe@123.com" type="email" required/>
                         <label className="text-[1.2rem] self-center justify-self-start md:justify-self-end row-span-1 2xl:col-span-2 xl:col-span-2 lg:col-span-2 md:col-span-2 xs:col-span-6" htmlFor="">Contact Number:</label>
                         <input value={inputs.phone} name='phone' onChange={event => setInputs({...inputs, phone: event.target.value})} className="text-[1.2rem] h-[45px] p-[5px] border-2 col-span-8 md:col-span-3 row-span-1 [&::-webkit-inner-spin-button]:hidden" placeholder="09123456789" inputMode="numeric" type="number" required/>
                         <label className="text-[1.2rem] self-center justify-self-start md:justify-self-end row-span-1 2xl:col-span-2 xl:col-span-2 lg:col-span-2 md:col-span-2 xs:col-span-6" htmlFor="">Message:</label>
@@ -94,7 +94,7 @@ const submit = async(event) => {
                     <div className='mx-[10px] mb-[10px]'>
                         <p className='break-all'><strong>Name:</strong> {inputs.name}</p>
                         <p><strong>Subject:</strong> {inputs.subject}</p>
-                        <p><strong>Email:</strong> {inputs.emailData}</p>
+                        <p><strong>Email:</strong> {inputs.email}</p>
                         <p><strong>Phone:</strong> {inputs.phone}</p>
                         <p><strong>Message:</strong> {inputs.message}</p>
                     </div>

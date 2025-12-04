@@ -20,9 +20,9 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/post', async (req, res) => {
-    const {name, subject, emailData, phone, message} = req.body;
+    const {name, subject, email, phone, message} = req.body;
 
-    if(!name || !subject || !emailData || !phone || !message){
+    if(!name || !subject || !email || !phone || !message){
         return res.status(400).json({error: 'all fields a required'})
     }
 
@@ -30,7 +30,7 @@ const adminHtml = `
   <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
     <h2> ${subject}</h2>
     <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${emailData}</p>
+    <p><strong>Email:</strong> ${email}</p>
     <p><strong>Phone:</strong> ${phone}</p>
     <p><strong>Message:</strong></p>
     <p>${message}</p>
@@ -52,14 +52,14 @@ const userHtml = `
 try{
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to:  `${emailData}`,
-    subject: "Thanks for Reaching out",
+    to:  user,
+    subject: subject,
     html: adminHtml
   });
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: `${emailData}`,
+    to: email,
     subject: "Thanks for Reaching out",
     html: userHtml
   });
