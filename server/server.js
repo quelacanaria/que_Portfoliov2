@@ -52,14 +52,14 @@ const userHtml = `
 try{
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to:  emailData,
+    to:  `${emailData}`,
     subject: "Thanks for Reaching out",
     html: adminHtml
   });
 
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to: emailData,
+    to: `${emailData}`,
     subject: "Thanks for Reaching out",
     html: userHtml
   });
