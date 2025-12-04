@@ -1,0 +1,59 @@
+{
+    "Projects": {
+        "proj1":{
+            "id":1,
+            "pic":"Inventory System",
+            "description":" - I built this when I was in my second year of college for our CPE-221 Software Design project. It can do basic inventory management functions like adding, updating, deleting, and viewing items in the inventory. ",
+            "link":"https://github.com/quelacanaria/InventorySystem",
+            "frontend":["html5", "css3", "javascript", "bootstrap", "jquery"],
+            "backend":["php"],
+            "database":["xampp"],
+            "deployment":[],
+            "date":"July 2023"
+        },
+        "proj2":{
+            "id":2,
+            "pic":"BankApp",
+            "description":" - I built this when I was taking Java NCIII this is my project we are ask todo a bank system that can do basic banking transactions like deposit, withdraw, transfer, view balance, authentication, and authorization. ",
+            "link":"https://github.com/quelacanaria/Task/tree/main/BankApp",
+            "frontend":["html5", "css3", "javascript", "bootstrap"],
+            "backend":["java", "springBoot"],
+            "database":["xampp"],
+            "deployment":[],
+            "date":"September 2025"
+        },
+        "proj3":{
+            "id":3,
+            "pic":"DiceRoller",
+            "description":" - I created this project to improve my HTML, CSS, and JavaScript skills as I prepare to jump into React. It allows the user to enter how many six-sided dice to roll and then displays the results.",
+            "link":"https://quelacanaria.github.io/diceRoller/",
+            "frontend":["html5", "css3", "javascript"],
+            "backend":[],
+            "database":[],
+            "deployment":["github"],
+            "date":"October 2025"
+        },
+        "proj4":{
+            "id":4,
+            "pic":"TodoListApp",
+            "description":" – I created this project to improve my React skills. It's a simple Todo List app where users can add, view, and delete tasks, helping me learn components, state, and event handling.",
+            "link":"https://quelacanaria.github.io/TodoListApp_React/",
+            "frontend":["html5", "css3", "javascript", "react"],
+            "backend":[],
+            "database":[],
+            "deployment":["github"],
+            "date":"November 2025"
+        },
+        "proj5":{
+            "id":5,
+            "pic":"BooksCrude",
+            "description":" – I created this project to learn MERN stack. It's a Book CRUD app exploring my react and learning server's, api-routings, request, response, models, axios, testing api's using postman, and mongodb.",
+            "link":"https://my-frontend-7rll.onrender.com/",
+            "frontend":["html5", "css3", "javascript", "react"],
+            "backend":["nodejs", "expressjs", "postman"],
+            "database":["mongodb"],
+            "deployment":["render"],
+            "date":"November 2025"
+        }
+    }
+}

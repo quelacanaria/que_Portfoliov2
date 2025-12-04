@@ -1,0 +1,40 @@
+html, body {
+  overflow-x: hidden;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 764px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-twitter-blue: #1DA1F2;
+  --color-green-xx: hsl(147, 40%, 76%);
+  --color-fink-99: hsla(9, 40%, 76%);
+  --color-orange-500: #ffa500;
+
+  --shadow-mine: 3px 3px 5px hsla(0, 0%, 0%, .2);
+  --shadow-xx: 3px 3px 5px black;
+  --shadow-header: 2px 2px 10px;
+  --shadow-text: 2px 2px 5px hsla(0, 0%, 0%, .2);
+--shadow-gg: 5px 5px 5px hsla(0, 0%, 0%, .2);
+
+  --text-1rem: 1rem;
+  --width-95: 95%;
+  --color-me-100: rgba(0, 0, 0, 0.5);
+  --spacing: 0;
+  --color-hays-100: hsl(9, 40%, 76%);
+}
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.front:active .back {
+  transform: rotateY(180deg);
+
+}

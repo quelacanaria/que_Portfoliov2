@@ -1,0 +1,34 @@
+
+.titleAnimate{
+    animation: rotateTitle .5s;
+}
+
+@keyframes rotateTitle {
+    from{
+        opacity: 0;
+        rotate: 0deg;
+    }
+
+    to{
+        opacity: 1;
+        rotate: 360deg;
+    }
+}
+
+.ProjectsAnimate{
+  animation-name: slideRight;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

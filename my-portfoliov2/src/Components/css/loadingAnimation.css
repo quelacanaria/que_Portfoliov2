@@ -1,0 +1,31 @@
+.loading-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* SVG circle style */
+.loading-circle {
+  stroke: rgb(22, 79, 154);
+  stroke-width: 10;
+  fill: none;
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  animation: loading-stroke 1.4s cubic-bezier(0.65, 0, 0.45, 1) infinite;
+  transform-origin: center;
+}
+
+/* Rotation + stroke draw animation */
+@keyframes loading-stroke {
+  0% {
+    stroke-dashoffset: 166;
+    transform: rotate(0deg);
+  }
+  100% {
+    stroke-dashoffset: 166;
+    transform: rotate(360deg);
+  }
+}
