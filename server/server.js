@@ -70,8 +70,8 @@ try{
     html: adminHtml
   });
 
-  await transporter.sendMail({
-    from: {email: login},
+  await brevo.sendTransacEmail({
+    sender: {email: login},
     to: [{email}],
     subject: "Thanks for Reaching out",
     html: userHtml
