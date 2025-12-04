@@ -64,16 +64,16 @@ app.post('/api/post', async (req, res) => {
   try {
     // Email to admin
     await brevo.sendTransacEmail({
-      sender: { email: login },
-      to: [{ email: user }],
+      sender:  login ,
+      to:  user ,
       subject: `${subject}`,
       htmlContent: adminHtml, // <-- changed here
     });
 
     // Confirmation email to user
     await brevo.sendTransacEmail({
-      sender: { email: login },
-      to: [{ email }],
+      sender:  login ,
+      to:email,
       subject: 'Thanks for Reaching out',
       htmlContent: userHtml, // <-- changed here
     });
