@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
     service: host,
-    port: 587,
+    port: PORT,
     secure: false,
     auth: {
         user: user,
