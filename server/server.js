@@ -9,14 +9,14 @@ const PORT = process.env.PORT;
 const user = process.env.USER;
 const userpassword = process.env.USERPASSWORD;
 
-app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
+app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com/'}));    
 app.use(bodyParser.json());
 
 
 const transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false,
+    service: "gmail",
+    port: 465,
+    secure: true,
     auth: {
         user: user,
         pass: userpassword
