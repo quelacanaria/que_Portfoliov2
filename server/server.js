@@ -4,32 +4,22 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
+
 const host = process.env.HOST;
 const PORT = process.env.PORT;
 const user = process.env.USER;
+const resend = new Resend(process.env.API);
 const userpassword = process.env.USERPASSWORD;
 
 app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
 app.use(bodyParser.json());
 
-
-const transporter = nodemailer.createTransport({
-    service: host,
-    port: PORT,
-    secure: false,
-    auth: {
-        user: user,
-        pass: userpassword
-    },
-});
-
-// console.log(transporter);
-
 app.get('/', (req, res) => {
     res.send('hello');
 });
 
-app.post('/api/post', (req, res) => {
+app.post('/api/post', async (req, res) => {
     const {name, subject, email, phone, message} = req.body;
 
     if(!name || !subject || !email || !phone || !message){
@@ -59,41 +49,44 @@ const userHtml = `
   </div>
 `;
 
-const adminMailOptions = {
-  from: email,
-  to: user, 
-  subject: `${subject}`,
-  html: adminHtml,
-};
+// const adminMailOptions = {
+//   from: email,
+//   to: user, 
+//   subject: `${subject}`,
+//   html: adminHtml,
+// };
 
-const userMailOptions = {
-  from: user, 
-  to: email, 
-  subject: 'Thanks for Reaching Out!',
-  html: userHtml,
-};
+// const userMailOptions = {
+//   from: user, 
+//   to: email, 
+//   subject: 'Thanks for Reaching Out!',
+//   html: userHtml,
+// };
 
-transporter.sendMail(adminMailOptions, (error, info) => {
-  if (error) {
-    console.error('Error sending email to admin:', error);
-    return res.status(500).json({ error: 'Failed to send email to admin.' });
-  }
-
-  console.log('Admin email sent:', info.response);
-
-  transporter.sendMail(userMailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending acknowledgment email to user:', error);
-      return res.status(500).json({ error: 'Failed to send acknowledgment email.' });
-    }
-
-    console.log('Acknowledgment email sent:', info.response);
-    res.status(200).json({ success: true, message: 'Emails sent successfully!', data: info.response });
+try{
+  await resend.emails.send({
+    from: email,
+    to: user,
+    subject: `${subject}`,
+    html: adminHtml
   });
-});
+
+  await resend.emails.send({
+    from: user,
+    to: email,
+    subject: "Thanks for Reaching out",
+    html: userHtml
+  });
+
+  res.status(200).json({success: true, message: 'Email sent successfully!'})
+
+}catch(error){
+  console.log('error -> ', error);
+  res.status(500).json({success: false, message: 'Something went wrong'});
+}
 
 })
-+
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
