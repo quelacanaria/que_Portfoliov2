@@ -52,7 +52,7 @@ const cardTitle = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection
               autoplay={{ delay: 1500, disableOnInteraction: false }}>
               {techIcons.map((icon) => (
                 <SwiperSlide key={icon}>
-                    <img className="w-[100px] justify-self-center self-center rounded-[10px] mt-[10px] mx-[6px] hover:scale-115 duration-300" src={`../src/Components/image/${icon}.svg`} alt={icon} />
+                    <img className="w-[100px] justify-self-center self-center rounded-[10px] mt-[10px] mx-[6px] hover:scale-115 duration-300" src={`./image/${icon}.svg`} alt={icon} />
                     <p className="text-[1.2rem] text-center break-all">{icon}</p>
                 </SwiperSlide>
               ))}
