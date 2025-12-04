@@ -14,7 +14,9 @@ app.use(bodyParser.json());
 
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false,
     auth: {
         user: user,
         pass: userpassword
