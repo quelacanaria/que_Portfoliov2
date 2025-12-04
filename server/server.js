@@ -52,8 +52,8 @@ const userHtml = `
 try{
   await resend.emails.send({
     from: 'onboarding@resend.dev',
-    to:  user,
-    subject: subject,
+    to:  emailData,
+    subject: "Thanks for Reaching out",
     html: adminHtml
   });
 
