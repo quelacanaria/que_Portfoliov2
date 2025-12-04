@@ -4,28 +4,22 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
+const host = process.env.HOST;
 const PORT = process.env.PORT;
 const user = process.env.USER;
+const resend = new Resend(process.env.API);
 const userpassword = process.env.USERPASSWORD;
-app.use(cors());    
+
+app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
 app.use(bodyParser.json());
-
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: user,
-        pass: userpassword
-    },
-});
-console.log(transporter);
 
 app.get('/', (req, res) => {
     res.send('hello');
 });
 
-app.post('/api/post', (req, res) => {
+app.post('/api/post', async (req, res) => {
     const {name, subject, email, phone, message} = req.body;
 
     if(!name || !subject || !email || !phone || !message){
@@ -50,61 +44,32 @@ const userHtml = `
     <p>Hi ${name},</p>
     <p>Thank you for contacting me. I’ve received your message and I’ll get back to you as soon as possible.</p>
     <p>Looking forward to connecting with you!</p>
-    <p>Best regards,<br/>Quekeneth</p>
+    <p>Best regards, </p>
+    <p>Quekeneth S. Lacanaria</p>
   </div>
 `;
 
-// const adminMailOptions = {
-//   from: email,
-//   to: user, 
-//   subject: `${subject}`,
-//   html: adminHtml,
-// };
+try{
+  await resend.emails.send({
+    from: 'onboarding@resend.dev',
+    to: user,
+    subject: `${subject}`,
+    html: adminHtml
+  });
 
-// const userMailOptions = {
-//   from: user, 
-//   to: email, 
-//   subject: 'Thank you for contacting us!',
-//   html: userHtml,
-// };
+  await resend.emails.send({
+    from: 'onboarding@resend.dev',
+    to: email,
+    subject: "Thanks for Reaching out",
+    html: userHtml
+  });
 
-// transporter.sendMail(adminMailOptions, (error, info) => {
-//   if (error) {
-//     console.error('Error sending email to admin:', error);
-//     return res.status(500).json({ error: 'Failed to send email to admin.' });
-//   }
+  res.status(200).json({success: true, message: 'Email sent successfully!'})
 
-//   console.log('Admin email sent:', info.response);
-
-//   transporter.sendMail(userMailOptions, (error, info) => {
-//     if (error) {
-//       console.error('Error sending acknowledgment email to user:', error);
-//       return res.status(500).json({ error: 'Failed to send acknowledgment email.' });
-//     }
-
-//     console.log('Acknowledgment email sent:', info.response);
-//     res.status(200).json({ success: true, message: 'Emails sent successfully!' });
-//   });
-// });
-
-// const sendMail = async() => {
-//   try{
-//     const adminInfo = await transporter.sendMail(adminMailOptions);
-//     console.log('Admin email sent:', adminInfo.response);
-//     const userInfo = await transporter.sendMail(userMailOptions);
-//     if(!userInfo){
-      
-//     res.status(200).json({ success: true, message: 'Emails sent successfully!' });
-//     }
-
-//     console.log('Acknowledgment email sent:', userInfo.response);
-//   } catch (error) {
-//     console.error('Error sending emails:', error);
-//     res.status(500).json({ error: 'Failed to send emails.' });
-//   }
-// }
-// sendMail();
-
+}catch(error){
+  console.log('error -> ', error);
+  res.status(500).json({success: false, message: 'Something went wrong'});
+}
 
 })
 

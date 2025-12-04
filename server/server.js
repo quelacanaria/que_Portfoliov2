@@ -4,16 +4,24 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const nodemailer = require('nodemailer');
-const { Resend } = require('resend');
 
-const host = process.env.HOST;
+const login = process.env.LOGIN;
 const PORT = process.env.PORT;
 const user = process.env.USER;
-const resend = new Resend(process.env.API);
 const userpassword = process.env.USERPASSWORD;
 
 app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
 app.use(bodyParser.json());
+
+const transporter = nodemailer.createTransport({
+  host: 'smtp.relay.brevo.com',
+  port: 587,
+  secure: false,
+  auth: {
+    user: user,
+    pass: userpassword 
+  }
+})
 
 app.get('/', (req, res) => {
     res.send('hello');
@@ -49,30 +57,16 @@ const userHtml = `
   </div>
 `;
 
-// const adminMailOptions = {
-//   from: email,
-//   to: user, 
-//   subject: `${subject}`,
-//   html: adminHtml,
-// };
-
-// const userMailOptions = {
-//   from: user, 
-//   to: email, 
-//   subject: 'Thanks for Reaching Out!',
-//   html: userHtml,
-// };
-
 try{
-  await resend.emails.send({
-    from: 'onboarding@resend.dev',
+  await transporter.emails.send({
+    from: login,
     to: user,
     subject: `${subject}`,
     html: adminHtml
   });
 
-  await resend.emails.send({
-    from: 'onboarding@resend.dev',
+  await transporter.emails.send({
+    from: login,
     to: email,
     subject: "Thanks for Reaching out",
     html: userHtml
