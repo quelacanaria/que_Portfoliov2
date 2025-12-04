@@ -51,15 +51,15 @@ const userHtml = `
 
 try{
   await resend.emails.send({
-    from: 'onboarding@resend.dev',
-    to: user,
+    from: 'QueCode <onboarding@resend.dev>',
+    to: [{email: user}],
     subject: `${subject}`,
     html: adminHtml
   });
 
   await resend.emails.send({
-    from: 'onboarding@resend.dev',
-    to: email,
+    from: 'QueCode <onboarding@resend.dev>',
+    to: [{email: email}],
     subject: "Thanks for Reaching out",
     html: userHtml
   });
