@@ -4,14 +4,19 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
 const nodemailer = require('nodemailer');
+const {TransactionalEmailsApi} = require('@getbrevo/brevo');
 
 const login = process.env.LOGIN;
 const PORT = process.env.PORT;
 const user = process.env.USER;
 const userpassword = process.env.USERPASSWORD;
+const api = process.env.API;
 
 app.use(cors({origin: 'https://que-portfoliov2-1.onrender.com'}));    
 app.use(bodyParser.json());
+
+const brevo = new TransactionalEmailsApi();
+brevo.authentications.apiKey.apiKey = api;
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.relay.brevo.com',
@@ -58,16 +63,16 @@ const userHtml = `
 `;
 
 try{
-  await transporter.sendMail({
-    from: login,
-    to: user,
+  await brevo.sendTransacEmail({
+    sender: {email: login},
+    to: [{email: user}],
     subject: `${subject}`,
     html: adminHtml
   });
 
   await transporter.sendMail({
-    from: login,
-    to: email,
+    from: {email: login},
+    to: [{email}],
     subject: "Thanks for Reaching out",
     html: userHtml
   });

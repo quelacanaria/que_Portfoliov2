@@ -13,6 +13,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
     "@stationf/email-existence": "^0.2.4",
     "body-parser": "^2.2.1",
     "cors": "^2.8.5",
