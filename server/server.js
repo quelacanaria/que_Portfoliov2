@@ -9,7 +9,7 @@ const PORT = process.env.PORT;
 const user = process.env.USER;
 const userpassword = process.env.USERPASSWORD;
 
-app.use(cors());    
+app.use(cors({path: 'https://que-portfoliov2-1.onrender.com'}));    
 app.use(bodyParser.json());
 
 
