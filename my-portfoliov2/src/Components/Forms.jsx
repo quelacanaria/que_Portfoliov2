@@ -91,7 +91,7 @@ const submit = async(event) => {
             <main className="w-full h-screen fixed top-[0px] left-[0px] bg-me-100 flex justify-center items-center z-[9999]">
                 <section className="w-[280px] h-[360px] p-[10px] bg-white rounded-2xl overflow-hidden shadow-mine hover:scale-105 duration-300 grid">
                     <div>
-                        <p>Double-check your details. A verification email will be sent—if you don’t receive it, your email may be incorrect.</p>
+                        <p>Please double-check your details before sending so I can connect with you.</p>
                     </div>
                     <div className='mx-[10px] mb-[10px]'>
                         <p className='break-all'><strong>Name:</strong> {inputs.name}</p>
