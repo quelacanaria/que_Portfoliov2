@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import dotenv from 'dotenv'
 import useWindowHeight from './customHooks/useWindowHeight';
 import axios from 'axios';
 import SuccessModal from './modals/SuccessModal.jsx';
