@@ -22,8 +22,19 @@
             "deployment":[],
             "date":"September 2025"
         },
-        "proj3":{
+         "proj3":{
             "id":3,
+            "pic":"myPortfolio",
+            "description":" - I created this portfolio to showcase my skills and the projects I’ve worked on. It serves as a collection of all my work.",
+            "link":"https://que-portfoliov2-1.onrender.com/",
+            "frontend":["html5", "css3", "javascript", "react", "tailwindcss"],
+            "backend":[],
+            "database":[],
+            "deployment":["render"],
+            "date":"October 2025"
+        },
+        "proj4":{
+            "id":4,
             "pic":"DiceRoller",
             "description":" - I created this project to improve my HTML, CSS, and JavaScript skills as I prepare to jump into React. It allows the user to enter how many six-sided dice to roll and then displays the results.",
             "link":"https://quelacanaria.github.io/diceRoller/",
@@ -33,8 +44,8 @@
             "deployment":["github"],
             "date":"October 2025"
         },
-        "proj4":{
-            "id":4,
+        "proj5":{
+            "id":5,
             "pic":"TodoListApp",
             "description":" – I created this project to improve my React skills. It's a simple Todo List app where users can add, view, and delete tasks, helping me learn components, state, and event handling.",
             "link":"https://quelacanaria.github.io/TodoListApp_React/",
@@ -44,8 +55,8 @@
             "deployment":["github"],
             "date":"November 2025"
         },
-        "proj5":{
-            "id":5,
+        "proj6":{
+            "id":6,
             "pic":"BooksCrude",
             "description":" – I created this project to learn MERN stack. It's a Book CRUD app exploring my react and learning server's, api-routings, request, response, models, axios, testing api's using postman, and mongodb.",
             "link":"https://my-frontend-7rll.onrender.com/",
