@@ -14,8 +14,8 @@ function About({currentSection}) {
   const decesionHeight = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'about' ? 'aboutAnimate block' : 'hidden') : 'block';
 
   return (
-    <div className="w-full flex justify-center items-center 2xl:h-[550px] xl:h-[550px] lg:h-[550px] md:h-[550px] sm:h-[600px] xs:h-[800px] 2xs:h-[1050px] bg-green-xx">
-        <div className={`h-[95%] bg-fink-99 rounded-[10px] content-center mx-auto 2xl:w-[700px] xl:w-[700px] md:w-[700px] sm:w-[600px] xs:w-[400px] 2xs:w-[300px] ${decesionHeight}`}>
+    <div className="w-full flex justify-center max-h-[1050px] min-h-[550px] items-center 2xl:h-[550px] xl:h-[550px] lg:h-[550px] md:h-[550px] sm:h-[600px] xs:h-[800px] 2xs:h-[1050px] bg-green-xx">
+        <div className={`h-[95%] bg-fink-99 rounded-[10px] max-w-[700px] min-w-[300px] content-center mx-auto 2xl:w-[700px] xl:w-[700px] md:w-[700px] sm:w-[600px] xs:w-[400px] 2xs:w-[300px] ${decesionHeight}`}>
           <div className="w-[90%] h-[90%] bg-white mx-auto p-[5px] rounded-[10px] hover:translate-y-[-15px] duration-300 shadow-gg">
             <p className="text-center self-center text-[35px] row-span-1 col-span-4 "><i className="fa-solid fa-clipboard"></i> About</p>
             <p className="mx-[2px] text-[1rem]"> Hi! I’m Quekeneth S. Lacanaria, but you can call me Keneth. 
