@@ -84,7 +84,7 @@ const submit = async(event) => {
                         <label className="text-[1.2rem] self-center justify-self-start md:justify-self-end row-span-1 2xl:col-span-2 xl:col-span-2 lg:col-span-2 md:col-span-2 xs:col-span-6" htmlFor="">Message:</label>
                         <textarea value={inputs.message} name='message' onChange={event => setInputs({...inputs, message: event.target.value})} className="text-[1.2rem] h-[80px] p-[5px] border-2 col-span-8 md:col-span-3 row-span-2" placeholder="Hi Quekeneth nice meeting you!" type="text" required/>
                         <div className='col-span-6 row-span-1 text-center justify-self-center self-center'>
-                        <ReCAPTCHA sitekey='6LdSyiEsAAAAALEkAOSMUOYJ__2f4jILE8fVBorf    ' onChange={onChange} />
+                        <ReCAPTCHA sitekey='6LdSyiEsAAAAALEkAOSMUOYJ__2f4jILE8fVBorf'     onChange={onChange} />
                         </div>
                         <button className="w-[90%] md:w-[270px] h-[70px] text-[1.2rem] justify-self-center self-center border-2 bg-fink-99 
                         text-white border-transparent shadow-mine hover:bg-white hover:text-fink-99 hover:border-fink-99
