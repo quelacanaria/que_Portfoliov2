@@ -7,15 +7,18 @@ import Links from './Components/Links'
 import HeaderFooter from './Components/HeaderFooter'
 import Card from './Components/Card'
 import React, { useState, useEffect } from 'react'
+import useWindowHeight from './Components/customHooks/useWindowHeight'
 function App() { 
-  const [currentSection, setCurrentSection] = useState('home');
-
+  const [currentSection, setCurrentSection] = useState();
+  const windowHeight = useWindowHeight();
   useEffect(() => {
   const sections = document.querySelectorAll('section[data-section]');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if(entry.isIntersecting){
+      if(windowHeight >= 487 && windowHeight <= 800){
+        if(entry.isIntersecting){
         setCurrentSection(entry.target.getAttribute('data-section'))
+        }
       }
     })
   }, { threshold: 0.6 });

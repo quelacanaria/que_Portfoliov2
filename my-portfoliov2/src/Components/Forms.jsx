@@ -60,7 +60,7 @@ const submit = async(event) => {
 
 }
 
-    const contact = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'contact' ? 'formsAnimate block' : 'hidden') : 'block';
+    const contact = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'contact' ? 'formsAnimate block' : 'hidden') : 'block';
     
     
    

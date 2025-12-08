@@ -13,12 +13,12 @@ const techIcons = [
 function Card({currentSection}){
 
 const windowHeight = useWindowHeight();
-const card = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'home' ? 'cardAnimate flex' : 'hidden') : 'flex';
-const cardTitle = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'home' ? 'titleCardAnimate block' : 'invisible') : 'block';
+const card = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'home' ? 'cardAnimate flex' : 'hidden') : 'flex';
+const cardTitle = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'home' ? 'titleCardAnimate block' : 'invisible') : 'block';
 
     return(
         <>
-          <div className="w-full h-fit bg-green-xx block">
+          <div className="w-full h-[280px] bg-green-xx block">
           <div className=" h-[220px]  w-[90%] max-w-[1000px] min-w-[300px] bg-green-xx p-[5px] mx-auto  ">
             <p className={`mb-[20px] text-center text-[35px] ${cardTitle}`}>
               <i className="fa-solid fa-screwdriver-wrench"></i> My TechStack

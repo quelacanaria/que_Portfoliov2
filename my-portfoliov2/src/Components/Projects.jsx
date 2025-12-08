@@ -21,8 +21,8 @@ function Projects({currentSection}) {
         countProjects();
     }, []);
 
-    const project = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'projects' ? 'titleAnimate block': 'invisible') : 'block';
-    const projectTitle = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'projects' ? 'ProjectsAnimate block': 'hidden') : 'block';
+    const project = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'projects' ? 'titleAnimate block': 'invisible') : 'block';
+    const projectTitle = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'projects' ? 'ProjectsAnimate block': 'hidden') : 'block';
 
     return(
         <>
@@ -64,7 +64,9 @@ function Projects({currentSection}) {
                                 <div className='front w-[280px] h-[400px] bg-white p-[15px] rounded-[10px] shadow-header justify-self-center hover:translate-y-[-10px] duration-300 mt-[10px] mb-[20px] relative flex flex-col '>
                                     <img className='border-1 aspect-video' src={`./projects-images/${image.pic}.png`} alt="" />
                                     <p className='text-[1rem] text-center'>{image.pic}</p>
-                                    <p className='text-[.9rem]'>{image.date}{image.description}</p>
+                                    <div className='overflow-auto'>
+                                        <p className='text-[.9rem]'>{image.date}{image.description}</p>
+                                    </div>
                                     <div className='mt-auto flex gap-4 justify-evenly'>
                                          
                                         <a href={`${image.link}`} target='_blank'onMouseLeave={() => setFlip("card")} onMouseEnter={() => setFlip("dontFlip")} className={`w-[120px] h-[50px] border-2 content-center text-center font-bold text-white border border-transparent rounded-[10px] bg-fink-99 hover:scale-110 active:scale-90 active:shadow-transparent hover:shadow-fink-99 hover:bg-transparent hover:text-fink-99 hover:border-fink-99 duration-300 shadow-mine`}>Goto Project</a>

@@ -3,8 +3,8 @@ import './css/profileAnimate.css'
 function Home({currentSection}){
 
     const windowHeight = useWindowHeight();
-    const profile = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'home' ? 'profileAnimate flex' : 'hidden') : 'flex';
-    const profileText = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'home' ? 'profileTextAnimate block' : 'block') : 'block';
+    const profile = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'home' ? 'profileAnimate flex' : 'hidden') : 'flex';
+    const profileText = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'home' ? 'profileTextAnimate block' : 'block') : 'block';
 
     return(
         <>

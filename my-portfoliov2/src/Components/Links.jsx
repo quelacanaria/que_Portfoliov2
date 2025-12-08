@@ -3,7 +3,7 @@ import './css/linksAnimate.css'
 function Links({ currentSection}){
 
     const windowHeight = useWindowHeight();
-    const link = (windowHeight >= 486 && windowHeight <= 677) ? (currentSection === 'links' ? 'linksAnimate flex' : 'hidden') : 'flex'; 
+    const link = (windowHeight >= 486 && windowHeight <= 800) ? (currentSection === 'links' ? 'linksAnimate flex' : 'hidden') : 'flex'; 
 
     return(
         <>
@@ -12,15 +12,15 @@ function Links({ currentSection}){
                     <div className="w-[90%] min-w-[250px] max-w-[550px] h-[400px] bg-white rounded-2xl grid grid-cols-4 grid-rows-5 gap-x-[5px] gap-y-[5px] pb-[20px] hover:translate-y-[-10px] duration-300 shadow-gg">
                         <p className="text-center self-center text-[35px] row-span-1 col-span-4 "><i className="fa-solid fa-link"></i> My Links</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" href="#"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/whatsApp.svg" alt="" /></a>
-                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px]  text-[1.1rem] md:text-[1.2rem]">+639510010846</p>
+                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px]  text-[clamp(.9rem,2vw,1rem)]">+639510010846</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="mailto:lacanariaquekeneth46@gmail.com"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/gmail1.svg" alt="" /></a>
-                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[1.1rem] md:text-[1.2rem]">lacanariaquekeneth46@gmail.com</p>
+                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[clamp(.9rem,2vw,1rem)]">lacanariaquekeneth46@gmail.com</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://www.facebook.com/queque.neth"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/facebook.svg" alt="" /></a>
-                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[1.1rem] md:text-[1.2rem]">https://www.facebook.com/queque.neth</p>
+                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[clamp(.9rem,2vw,1rem)]">https://www.facebook.com/queque.neth</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://github.com/quelacanaria"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/github.svg" alt="" /></a>
-                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[1.1rem] md:text-[1.2rem]">https://github.com/quelacanaria</p>
+                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px] text-[clamp(.9rem,2vw,1rem)]">https://github.com/quelacanaria</p>
                         <a className="row-span-1 col-span-1 inline-block justify-self-end self-center" target="_blank" href="https://www.linkedin.com/in/quekeneth/"><img className="w-[50px] hover:scale-120 active:scale-90 duration-300" src="./image/linkedIn.svg" alt="" /></a>
-                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px]  text-[1.1rem] md:text-[1.2rem]">https://www.linkedin.com/in/quekeneth/</p>
+                        <p className="row-span-1 col-span-3 inline-block self-center break-all pr-[25px]  text-[clamp(.9rem,2vw,1rem)]">https://www.linkedin.com/in/quekeneth/</p>
                     </div>
                 </div>
             </div>
