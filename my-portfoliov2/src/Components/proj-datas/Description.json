@@ -75,7 +75,7 @@
         "proj7":{
             "id":7,
             "pic":"AuthJWT",
-            "description":" – I created this project to learn MERN stack. It's a Book CRUD app exploring my react and learning server's, api-routings, request, response, models, axios, testing api's using postman, and mongodb.",
+            "description":" – I created this project to explore in MERN stack. same as Book Crude Rest Api, MVC, Sign Up, Login, Reset Password, Authentication, Authorization, JWT, and Cookies",
             "github": "https://github.com/quelacanaria/AuthFullStack.git",
             "link":"https://authfullstack-5q55.onrender.com/",
             "frontend":["html5", "css3", "javascript", "react"],
