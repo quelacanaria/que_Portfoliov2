@@ -67,9 +67,26 @@ function Projects({currentSection}) {
                                     <div className='overflow-auto'>
                                         <p className='text-[.9rem]'>{image.date}{image.description}</p>
                                     </div>
-                                    <div className='mt-auto flex gap-4 justify-evenly'>
-                                         
-                                        <a href={`${image.link}`} target='_blank'onMouseLeave={() => setFlip("card")} onMouseEnter={() => setFlip("dontFlip")} className={`w-[120px] h-[50px] border-2 content-center text-center font-bold text-white border border-transparent rounded-[10px] bg-fink-99 hover:scale-110 active:scale-90 active:shadow-transparent hover:shadow-fink-99 hover:bg-transparent hover:text-fink-99 hover:border-fink-99 duration-300 shadow-mine`}>Goto Project</a>
+                                    <div className='mt-auto flex flex-row gap-2 sm:gap-4 justify-between items-center w-full px-1'>
+                                        
+                                        {image.link !== '' ? (<a href={image.link} target='_blank' rel="noreferrer" 
+                                            onMouseEnter={() => setFlip("dontFlip")} 
+                                            onMouseLeave={() => setFlip("card")}
+                                            className="flex-1 h-[45px] flex items-center justify-center text-[13px] md:text-sm font-bold text-white rounded-lg bg-fink-99 border-2 border-fink-99 hover:bg-transparent hover:text-fink-99 hover:scale-105 active:scale-95 duration-300 shadow-mine"
+                                        >
+                                            Demo
+                                        </a>) : ''}
+
+                                        {image.github !== '' ? (<a 
+                                            href={image.github} /* Make sure 'github' exists in your JSON */
+                                            target='_blank' 
+                                            rel="noreferrer"
+                                            onMouseEnter={() => setFlip("dontFlip")} 
+                                            onMouseLeave={() => setFlip("card")}
+                                            className="flex-1 h-[45px] flex items-center justify-center text-[13px] md:text-sm font-bold text-fink-99 rounded-lg bg-transparent border-2 border-fink-99 hover:bg-fink-99 hover:text-white hover:scale-105 active:scale-95 duration-300 shadow-mine"
+                                        >
+                                            <i className="fa-brands fa-github mr-2"></i> GitHub
+                                        </a>) : ''}
                                     </div>
                                 </div>
                                 <div className='back max-w-[300px] min-w-[300px] max-h-[400px] min-h-[400px] bg-white p-[15px] rounded-[10px] shadow-header justify-self-center hover:translate-y-[-10px] duration-300 mt-[10px] mb-[10px] relative flex flex-col'>
