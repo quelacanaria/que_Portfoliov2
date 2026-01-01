@@ -83,6 +83,18 @@
             "database":["mongodb"],
             "deployment":["render"],
             "date":"December 2025"
+        },
+        "proj8":{
+            "id":8,
+            "pic":"Welcome_2026!!",
+            "description":" – I created this project to greet my friends a happy new year",
+            "github": "https://github.com/quelacanaria/yearEndMessage.git",
+            "link":"https://quelacanaria.github.io/yearEndMessage/",
+            "frontend":["html5", "css3", "javascript"],
+            "backend":[],
+            "database":[],
+            "deployment":["github"],
+            "date":"December 2025"
         }
     }
 }
