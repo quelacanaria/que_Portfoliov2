@@ -57,7 +57,7 @@ function Projects({currentSection}) {
                         // autoplay={{ delay: 1500, disableOnInteraction: false }}
                         >
                     {
-                        des && Object.values(des.Projects).map((image, index) => (
+                        des && Object.values(des.Projects).reverse().map((image, index) => (
                             
                             <SwiperSlide key={index}>
                             <div className={`${flip} mb-[20px] `}>
