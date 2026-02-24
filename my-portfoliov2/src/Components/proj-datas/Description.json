@@ -101,12 +101,24 @@
             "pic":"NextBlogSite",
             "description":" – I created this project to learn typescript, supbase, and nextjs. This project has authentication you can write and post a public or private a blog",
             "github": "https://github.com/quelacanaria/next-blog-site",
-            "link":"https://next-blog-site-v4n3.onrender.com/",
+            "link":"https://quelacanaria.github.io/under-maintenance/",
             "frontend":["nextjs", "react", "typescript"],
             "backend":["nextjs","supabase", "typescript"],
             "database":["supabase"],
             "deployment":["render"],
             "date":"January 2026"
+        },
+        "proj10":{
+            "id":10,
+            "pic":"FlutterBlogSite",
+            "description":" – I created this project to learn flutter, supbase, and dart. This project has authentication you can write post with multiple images, public or private a blog with android app version",
+            "github": "https://github.com/quelacanaria/flutter_blog_site",
+            "link":"https://flutter-blog-site123.onrender.com/",
+            "frontend":["flutter", "dart"],
+            "backend":["flutter","supabase", "dart"],
+            "database":["supabase"],
+            "deployment":["render"],
+            "date":"February 2026"
         }
     }
 }
