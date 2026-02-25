@@ -6,8 +6,7 @@ import "swiper/css/navigation";
 import './css/cardAnimate.css'
 
 const techIcons = [
-  "html5", "css3", "tailwindcss", "javascript", "typescript", "react", "nextjs", "nodejs", "expressjs", "supabase",
-  "java", "springBoot", "php", "xampp", "mongodb", "git", "github"
+  "html5", "css3", "tailwindcss", "javascript", "typescript", "react", "nextjs", "nodejs", "expressjs", "supabase", "flutter", "dart", "java", "springBoot", "php", "xampp", "mongodb", "git", "github", "render"
 ];
 
 function Card({currentSection}){
