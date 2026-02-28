@@ -101,7 +101,7 @@
             "pic":"NextBlogSite",
             "description":" – I created this project to learn typescript, supbase, and nextjs. This project has authentication you can write and post a public or private a blog",
             "github": "https://github.com/quelacanaria/next-blog-site",
-            "link":"https://quelacanaria.github.io/under-maintenance/",
+            "link":"https://next-blog-site-v4n3.onrender.com/",
             "frontend":["nextjs", "react", "typescript"],
             "backend":["nextjs","supabase", "typescript"],
             "database":["supabase"],
