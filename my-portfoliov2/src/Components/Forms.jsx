@@ -7,7 +7,7 @@ import FailedModal from './modals/FailedModal.jsx';
 import './css/formsAnimate.css'
 function Forms({currentSection}){
     // const url = 'http://localhost:5000/api/post';
-    const url = 'https://que-portfoliov2.onrender.com/api/post';
+    const url = 'https://que-portfoliov2.vercel.app//api/post';
     const [sendMessage, setSendMessage] = useState(null);
     const [success, setSuccess] = useState('hidden');
     const [loading, setLoading] = useState('hidden');
