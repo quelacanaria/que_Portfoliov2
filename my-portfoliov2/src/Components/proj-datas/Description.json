@@ -3,7 +3,7 @@
         "proj1":{
             "id":1,
             "pic":"Inventory System",
-            "description":"I built this when I was in my second year of college for our CPE-221 Software Design project. It can do basic inventory management functions like adding, updating, deleting, and viewing items in the inventory. ",
+            "description":"A web-based inventory management system developed for a college software design course, featuring core CRUD operations for managing items efficiently.",
             "github": "https://github.com/quelacanaria/InventorySystem",
             "link":"",
             "frontend":["html5", "css3", "javascript", "bootstrap", "jquery"],
@@ -14,7 +14,7 @@
         "proj2":{
             "id":2,
             "pic":"BankApp",
-            "description":"I built this when I was taking Java NCIII this is my project we are ask todo a bank system that can do basic banking transactions like deposit, withdraw, transfer, view balance, authentication, and authorization. ",
+            "description":"A Java-based banking application that supports essential transactions such as deposits, withdrawals, transfers, and secure user authentication.",
             "github": "https://github.com/quelacanaria/Task/tree/main/BankApp",
             "link":"",
             "frontend":["html5", "css3", "javascript", "bootstrap"],
@@ -25,7 +25,7 @@
          "proj3":{
             "id":3,
             "pic":"myPortfolio",
-            "description":"I created this portfolio to showcase my skills and the projects I’ve worked on. It serves as a collection of all my work.",
+            "description":"A personal portfolio website built to showcase my technical skills and highlight the projects I have developed.",
             "github": "https://github.com/quelacanaria/que_Portfoliov2.git",
             "link":"https://que-portfoliov2-1.onrender.com/",
             "frontend":["html5", "css3", "javascript", "react", "tailwindcss"],
@@ -36,7 +36,7 @@
         "proj4":{
             "id":4,
             "pic":"DiceRoller",
-            "description":"I created this project to improve my HTML, CSS, and JavaScript skills as I prepare to jump into React. It allows the user to enter how many six-sided dice to roll and then displays the results.",
+            "description":"An interactive web application that simulates rolling multiple six-sided dice, designed to strengthen my JavaScript and DOM manipulation skills.",
             "github": "https://github.com/quelacanaria/diceRoller.git",
             "link":"https://quelacanaria.github.io/diceRoller/",
             "frontend":["html5", "css3", "javascript"],
@@ -47,7 +47,7 @@
         "proj5":{
             "id":5,
             "pic":"TodoListApp",
-            "description":"I created this project to improve my React skills. It's a simple Todo List app where users can add, view, and delete tasks, helping me learn components, state, and event handling.",
+            "description":"A React-based task management application that allows users to add, view, and delete tasks while demonstrating core React concepts.",
             "github": "https://github.com/quelacanaria/TodoListApp_React.git",
             "link":"https://quelacanaria.github.io/TodoListApp_React/",
             "frontend":["html5", "css3", "javascript", "react"],
@@ -58,7 +58,7 @@
         "proj6":{
             "id":6,
             "pic":"BooksCrude",
-            "description":"I created this project to learn MERN stack. It's a Book CRUD app exploring my react and learning server's, api-routings, request, response, models, axios, testing api's using postman, and mongodb.",
+            "description":"A full-stack MERN application that enables users to perform CRUD operations on books while demonstrating API development and database integration.",
             "github": "https://github.com/quelacanaria/Crude_MERN_Stack.git",
             "link":"https://my-frontend-7rll.onrender.com/",
             "frontend":["html5", "css3", "javascript", "react"],
@@ -69,7 +69,7 @@
         "proj7":{
             "id":7,
             "pic":"AuthJWT",
-            "description":"I created this project to explore in MERN stack. same as Book Crude Rest Api, MVC, Sign Up, Login, Reset Password, Authentication, Authorization, JWT, and Cookies",
+            "description":"A MERN-based authentication system implementing features such as user registration, login, password reset, and secure JWT-based authentication.",
             "github": "https://github.com/quelacanaria/AuthFullStack.git",
             "link":"https://authfullstack-5q55.onrender.com/",
             "frontend":["html5", "css3", "javascript", "react"],
@@ -80,7 +80,7 @@
         "proj8":{
             "id":8,
             "pic":"Welcome_2026!!",
-            "description":"I created this project to greet my friends a happy new year",
+            "description":"A simple interactive web page created to deliver a personalized New Year greeting using core frontend technologies.",
             "github": "https://github.com/quelacanaria/yearEndMessage.git",
             "link":"https://quelacanaria.github.io/yearEndMessage/",
             "frontend":["html5", "css3", "javascript"],
@@ -91,7 +91,7 @@
         "proj9":{
             "id":9,
             "pic":"NextBlogSite",
-            "description":"I created this project to learn typescript, supbase, and nextjs. This project has authentication you can write and post a public or private a blog",
+            "description":"A full-stack blog platform built with Next.js, TypeScript, and Supabase that allows users to create and manage public or private posts with authentication.",
             "github": "https://github.com/quelacanaria/next-blog-site",
             "link":"https://next-blog-site-two.vercel.app/",
             "frontend":["nextjs", "react", "typescript"],
@@ -102,7 +102,7 @@
         "proj10":{
             "id":10,
             "pic":"FlutterBlogSite",
-            "description":"I created this project to learn flutter, supbase, and dart. This project has authentication you can write post with multiple images, public or private a blog with android app version",
+            "description":"A cross-platform blog application developed with Flutter and Supabase that supports user authentication and posting content with multiple images.",
             "github": "https://github.com/quelacanaria/flutter_blog_site",
             "link":"https://flutter-blog-site123.onrender.com/",
             "frontend":["flutter", "dart"],
