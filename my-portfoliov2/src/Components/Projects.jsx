@@ -65,7 +65,7 @@ function Projects({currentSection}) {
                                     <img className='border-1 aspect-video' src={`./projects-images/${image.pic}.png`} alt="" />
                                     <p className='text-[1rem] text-center'>{image.pic}</p>
                                     <div className='overflow-auto'>
-                                        <p className='text-[.9rem]'>{image.date}{image.description}</p>
+                                        <p className='text-[.9rem]'>{image.description}</p>
                                     </div>
                                     <div className='mt-auto flex flex-row gap-2 sm:gap-4 justify-between items-center w-full px-1'>
                                         

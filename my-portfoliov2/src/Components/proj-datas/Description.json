@@ -9,8 +9,7 @@
             "frontend":["html5", "css3", "javascript", "bootstrap", "jquery"],
             "backend":["php"],
             "database":["xampp"],
-            "deployment":[],
-            "date":"July 2023"
+            "deployment":[]
         },
         "proj2":{
             "id":2,
@@ -21,8 +20,7 @@
             "frontend":["html5", "css3", "javascript", "bootstrap"],
             "backend":["java", "springBoot"],
             "database":["xampp"],
-            "deployment":[],
-            "date":"September 2025"
+            "deployment":[]
         },
          "proj3":{
             "id":3,
@@ -33,8 +31,7 @@
             "frontend":["html5", "css3", "javascript", "react", "tailwindcss"],
             "backend":[],
             "database":[],
-            "deployment":["render"],
-            "date":"October 2025"
+            "deployment":["render"]
         },
         "proj4":{
             "id":4,
@@ -45,8 +42,7 @@
             "frontend":["html5", "css3", "javascript"],
             "backend":[],
             "database":[],
-            "deployment":["github"],
-            "date":"October 2025"
+            "deployment":["github"]
         },
         "proj5":{
             "id":5,
@@ -57,8 +53,7 @@
             "frontend":["html5", "css3", "javascript", "react"],
             "backend":[],
             "database":[],
-            "deployment":["github"],
-            "date":"November 2025"
+            "deployment":["github"]
         },
         "proj6":{
             "id":6,
@@ -69,8 +64,7 @@
             "frontend":["html5", "css3", "javascript", "react"],
             "backend":["nodejs", "expressjs", "postman"],
             "database":["mongodb"],
-            "deployment":["render"],
-            "date":"November 2025"
+            "deployment":["render"]
         },
         "proj7":{
             "id":7,
@@ -81,8 +75,7 @@
             "frontend":["html5", "css3", "javascript", "react"],
             "backend":["nodejs", "expressjs", "postman"],
             "database":["mongodb"],
-            "deployment":["render"],
-            "date":"December 2025"
+            "deployment":["render"]
         },
         "proj8":{
             "id":8,
@@ -93,20 +86,18 @@
             "frontend":["html5", "css3", "javascript"],
             "backend":[],
             "database":[],
-            "deployment":["github"],
-            "date":"December 2025"
+            "deployment":["github"]
         },
         "proj9":{
             "id":9,
             "pic":"NextBlogSite",
             "description":" – I created this project to learn typescript, supbase, and nextjs. This project has authentication you can write and post a public or private a blog",
             "github": "https://github.com/quelacanaria/next-blog-site",
-            "link":"https://next-blog-site-v4n3.onrender.com/",
+            "link":"https://next-blog-site-two.vercel.app/",
             "frontend":["nextjs", "react", "typescript"],
             "backend":["nextjs","supabase", "typescript"],
             "database":["supabase"],
-            "deployment":["render"],
-            "date":"January 2026"
+            "deployment":["render"]
         },
         "proj10":{
             "id":10,
@@ -117,8 +108,7 @@
             "frontend":["flutter", "dart"],
             "backend":["flutter","supabase", "dart"],
             "database":["supabase"],
-            "deployment":["render"],
-            "date":"February 2026"
+            "deployment":["render"]
         }
     }
 }
